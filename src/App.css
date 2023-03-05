@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.home-design{
+  position: fixed;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background: linear-gradient(125deg, transparent 45%, red 35%)
+}
+
+.home-design img{
+  width: 50%;
+}
+
+.base{
+  padding: min(2%, 10px);
+}
+
+.top-bar{
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, gray 50%, black 50%);
+  height: 10vh;
+}
+.top-bar img{
+  margin-left: 2%;
+  width: 40%;
+  height: 80%;
+}
+
+.cols {
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.cols-op{
+  height: 50%;
+  padding: 5%;
+  width: 90%;
+}
+
+.card{
+  border-radius: 8px;
+  margin-bottom: 5px;
+  background: linear-gradient(to left, rgba(90, 88, 88, 0.519), transparent 25%, transparent 75%, rgba(90, 88, 88, 0.519));
+
+}
+
+.cols-img{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pos-bag{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: -1;
+}
+.pos-bag img{
+  width: 80%;
+}
+
+.pokemon{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+.pokemon img{
+  width: 20%;
+}
+
+@media only screen and (min-width: 850px) {
+  .cols{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .cols-op{
+    height: 80vh;
+    width: 50%;
+  }
+  .cols-img{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+  }
+
+  .pos-bag img{
+    width: 60%;
+  }
+
+  .pokemon img{
+    width: 10%;
+  }
+}
+
+.fire{
+
+}
+.water{
+
+}
+.grass{
+
+}
+.fighting{
+
+}
+.normal{
+
+}
+.electric{
+    
+}
+.ice{
+
+}
+.ground{
+
+}
+.flying{
+
+}
+.poison{
+
+}
+.psychic{
+
+}
+.bug{
+
+}
+.rock{
+
+}
+.ghost{
+
+}
+.dark{
+
+}
+.dragon{
+
+}
+.steel{
+
+}
+.fairy{
+
+}
