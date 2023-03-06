@@ -31,12 +31,12 @@ export const Pokemones = () => {
                 <img src={Pikachu} alt="" />
             </div>
         </div>
-        <div className='app'>
+        <div className='app cols-op'>
           <main> 
             <nav>
               {filterPokemon?.slice(0,151).map((poke:IPokemon)=>(
                   <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
-                      <img src={poke.imgsrc} alt='bullbasuar' className='listIcon'/>
+                      <img src={poke.imgsrc} alt={poke.name} className='listIcon'/>
                   <div className='listItemText'>
                       <span className='nombre'>{poke.name}</span>
                       <span>{poke.id}</span>
