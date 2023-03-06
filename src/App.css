@@ -3,6 +3,57 @@
   margin: 0;
 }
 
+.app{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 80vh;
+  width: 100%;
+}
+
+.app main{
+  padding: 10px;
+  height: 90%;
+  width: 100%;
+  overflow: auto;
+}
+
+.listItem{
+  display: flex;
+  border-bottom: 3px solid #e4e4e4;
+  padding: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+.listItem>:first-child{
+  margin-right: 15px;
+}
+.listItem>:last-child{
+  margin: 0;
+}
+.listIcon{
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+.listItemText{
+  flex-grow: 2;
+}
+.nobmre{
+  text-decoration: none;
+  color: aqua;
+  -webkit-text-fill-color:transparent ;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 11px;
+  font-weight: bold;
+}
+.listItemText>:last-child{
+  color: grey;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  display: block;
+}
+
 .home-design{
   position: fixed;
   min-height: 100vh;
