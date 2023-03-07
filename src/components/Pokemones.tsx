@@ -20,7 +20,7 @@ export const Pokemones = () => {
         return poke.name.toLowerCase().match(query.toLowerCase());
     });
   return (
-    <>
+    <div className='home-design colorHome'>
       <Top/>
       <div className='cols base'>
         <div className='img-bag cols-img'>
@@ -33,14 +33,14 @@ export const Pokemones = () => {
         </div>
         <div className='app cols-op'>
           <main> 
-            <nav>
+            <nav >
               {filterPokemon?.slice(0,151).map((poke:IPokemon)=>(
                   <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
                       <img src={poke.imgsrc} alt={poke.name} className='listIcon'/>
-                  <div className='listItemText'>
-                      <span className='nombre'>{poke.name}</span>
-                      <span>{poke.id}</span>
-                  </div>
+                    <div className='listItemText'>
+                        <span className='nombre'>{poke.name}</span>
+                        <span>{poke.id}</span>
+                    </div>
 
                   </Link>
               ))}
@@ -50,6 +50,6 @@ export const Pokemones = () => {
         </div>
       </div>
     
-    </>
+    </div>
   )
 }
