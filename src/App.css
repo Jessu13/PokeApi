@@ -73,6 +73,22 @@
   display: flex;
 }
 
+.pokeballbutton{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  background: 'none';
+  padding: 5px 5px 0 50px;
+}
+
+.pokeballimage{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
 .home-design{
   position: fixed;
   min-height: 100vh;
