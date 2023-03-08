@@ -5,9 +5,10 @@ import Pikachu from '../img/pika.png';
 import { todosLosPokemon } from '../api/fetchPokemons';
 import { IPokemon } from '../models/IPokemon';
 import { Top } from './Top';
+import Buscar from './Buscar';
 
 export const Pokemones = () => {
-  const [query, setquery] = useState("");
+  const [query, setQuery] = useState("");
   const [pokemon, setpokemon] = useState<any>([]);
     useEffect(() => {
       const fetchPokemon=async()=>{
@@ -22,6 +23,7 @@ export const Pokemones = () => {
   return (
     <div className='home-design colorHome'>
       <Top/>
+      <Buscar query = {query} setQuery = {setQuery}/>
       <div className='cols base'>
         <div className='img-bag cols-img'>
             <div className='pos-bag'>
