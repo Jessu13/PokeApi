@@ -16,7 +16,7 @@ export const Pokemones = () => {
       }
       fetchPokemon();
     }, [])
-    const filterPokemon=pokemon?.slice(0,151).filter((poke:any)=>{
+    const filterPokemon=pokemon?.slice(0,650).filter((poke:any)=>{
         return poke.name.toLowerCase().match(query.toLowerCase());
     });
   return (
@@ -34,7 +34,7 @@ export const Pokemones = () => {
         <div className='app cols-op'>
           <main> 
             <nav >
-              {filterPokemon?.slice(0,151).map((poke:IPokemon)=>(
+              {filterPokemon?.slice(0,650).map((poke:IPokemon)=>(
                   <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
                       <img src={poke.imgsrc} alt={poke.name} className='listIcon'/>
                     <div className='listItemText'>

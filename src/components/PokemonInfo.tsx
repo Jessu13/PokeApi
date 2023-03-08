@@ -20,6 +20,9 @@ export const PokemonInfo = () => {
           fetchPokemon();
     }, [name])
 
+    console.log(pokemon?.name)
+    console.log(pokemon?.tipo[0])
+
     let type:string = 'home-design normal'
   return (
     <div className={type}>
@@ -30,15 +33,19 @@ export const PokemonInfo = () => {
         <div className='cols base'>
             <div className='img-bag cols-img'>
                 <div className='pokemon'>
-                    <img src={pokemon?.imgsrc} alt="" />
+                    <img src={pokemon?.img_cute} alt="dream_world" />
+                    
                 </div>
             </div>
             <div className='cols-op'>
                 <h1>{name?.toUpperCase()}</h1>
                 <h2><span>HP: {pokemon?.hp}</span></h2>
                 <h2>POWER: {pokemon?.attack}</h2>
-                <h2>Region</h2>
-                <h2>Tipo</h2>
+                <h2>Defense: {pokemon?.defense}</h2>
+                <h2>Altura: {pokemon?.altura}</h2>
+                <h2>Peso: {pokemon?.peso}</h2>
+                <h2>Experiencia base: {pokemon?.xp_base}</h2>
+                <img src={pokemon?.img_pres} alt="sornero" />
             </div>
         </div>
     </div>
