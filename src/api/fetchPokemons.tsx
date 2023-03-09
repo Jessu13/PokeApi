@@ -1,6 +1,7 @@
+import { IPokemon } from "../models/IPokemon";
 import { formatPokemon } from "../utils/utils";
 
-export async function todosLosPokemon() {
+export async function todosLosPokemon():Promise<IPokemon[]> {
     const response=await fetch(
         'https://unpkg.com/pokemons@1.1.0/pokemons.json'
     )
