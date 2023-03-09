@@ -4,7 +4,6 @@ import Pokeball from '../img/pokeball.png'
 import { useNavigate, useParams } from 'react-router-dom'
 import { PokemonDetails } from '../models/PokemonDetails';
 import { elPokemon } from '../api/fetchPokemon';
-import * as estilo from '../styles_va/styles.css';
 
 export const PokemonInfo = () => {
 

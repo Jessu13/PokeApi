@@ -9,7 +9,7 @@ import Buscar from './Buscar';
 
 export const Pokemones = () => {
   const [query, setQuery] = useState("");
-  const [pokemon, setpokemon] = useState<any>([]);
+  const [pokemon, setpokemon] = useState<IPokemon[]>([]);
     useEffect(() => {
       const fetchPokemon=async()=>{
         const allpokemon = await todosLosPokemon();
@@ -17,9 +17,10 @@ export const Pokemones = () => {
       }
       fetchPokemon();
     }, [])
-    const filterPokemon=pokemon?.slice(0,650).filter((poke:any)=>{
-        return poke.name.toLowerCase().match(query.toLowerCase());
-    });
+
+  const filterPokemon = pokemon?.slice(0,650).filter((pokemon)=>{
+      return pokemon.name.toLowerCase().match(query.toLowerCase());
+  });
   return (
     <div className='home-design colorHome'>
       <Top/>

@@ -1,3 +1,5 @@
+import { formatPokemon } from "../utils/utils";
+
 export async function todosLosPokemon() {
     const response=await fetch(
         'https://unpkg.com/pokemons@1.1.0/pokemons.json'
@@ -11,7 +13,7 @@ export async function todosLosPokemon() {
     const pokemons=results.map((pokemon:any)=>({
             name:pokemon.name,
             id:pokemon.national_number,
-            imgsrc:`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name.toLowerCase()}.gif`,
+            imgsrc:`https://img.pokemondb.net/sprites/black-white/anim/normal/${formatPokemon(pokemon.name.toLowerCase())}.gif`,
         })
     );
     

@@ -1,7 +1,9 @@
 import {PokemonDetails} from '../models/PokemonDetails'
+import { formatPokemon } from '../utils/utils';
+
 export async function elPokemon(name:string):Promise<PokemonDetails> {
     const response=await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${name}`
+        `https://pokeapi.co/api/v2/pokemon/${formatPokemon(name)}`
     )
     console.log(response);
     if(!response.ok){
