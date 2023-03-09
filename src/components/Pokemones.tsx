@@ -23,7 +23,6 @@ export const Pokemones = () => {
   return (
     <div className='home-design colorHome'>
       <Top/>
-      <Buscar query = {query} setQuery = {setQuery}/>
       <div className='cols base'>
         <div className='img-bag cols-img'>
             <div className='pos-bag'>
@@ -34,6 +33,7 @@ export const Pokemones = () => {
             </div>
         </div>
         <div className='app cols-op'>
+          <Buscar query = {query} setQuery = {setQuery}/>
           <main> 
             <nav >
               {filterPokemon?.slice(0,650).map((poke:IPokemon)=>(

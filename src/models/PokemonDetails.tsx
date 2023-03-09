@@ -1,13 +1,14 @@
 import { NamedTupleMember } from "typescript"
+import { Tipo } from "./Tipo"
 
 export interface PokemonDetails{
     name:string,
     id:number,
     imgsrc:string,
-    hp:number,
+    hp:number|0,
     attack:number,
     defense:number,
-    tipo:string[],
+    tipo:Tipo[],
     altura:number,
     peso:number,
     xp_base:number,
