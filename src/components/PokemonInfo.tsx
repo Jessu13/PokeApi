@@ -12,38 +12,38 @@ export const PokemonInfo = () => {
     const navigate = useNavigate();
     
     let width_hp = {
-        per: {width: `${pokemon?.hp}%`, background: "green"},
+        per: {width: `${pokemon?.hp}%`, background: "#02b899"},
     };
     if (pokemon?.hp != null && pokemon?.hp > 100) {
         width_hp.per = {
-            width: "100%", background: "red"
+            width: "100%", background: "#eb372b"
         }
     }
 
     let width_pw = {
-        per: {width: `${pokemon?.attack}%`, background: "green"},
+        per: {width: `${pokemon?.attack}%`, background: "#02b899"},
     };
     if (pokemon?.attack != null && pokemon?.attack > 100) {
         width_pw.per = {
-            width: "100%", background: "red"
+            width: "100%", background: "#eb372b"
         }
     }
 
     let width_df = {
-        per: {width: `${pokemon?.defense}%`, background: "green"},
+        per: {width: `${pokemon?.defense}%`, background: "#02b899"},
     };
     if (pokemon?.defense != null && pokemon?.defense > 100) {
         width_df.per = {
-            width: "100%", background: "red"
+            width: "100%", background: "#eb372b"
         }
     }
 
     let width_xp = {
-        per: {width: `${pokemon?.xp_base}%`, background: "green"},
+        per: {width: `${pokemon?.xp_base}%`, background: "#02b899"},
     }
     if (pokemon?.xp_base != null && pokemon?.xp_base > 100) {
         width_xp.per = {
-            width: "100%", background: "red"
+            width: "100%", background: "#eb372b"
         }
     }
 
@@ -74,17 +74,34 @@ export const PokemonInfo = () => {
             </div>
             <div className='cardInfo' >
                 <h1>{name?.toUpperCase()}</h1>
-                <h2><span>HP: {pokemon?.hp}</span></h2>
-                <div className='sectionCont'><div className='container'><div className="per" style={width_hp.per}></div></div></div>
-                <h2>POWER: {pokemon?.attack}</h2>
-                <div className='sectionCont'><div className='container'><div className='per' style={width_pw.per}></div></div></div>
-                <h2>Defense: {pokemon?.defense}</h2>
-                <div className='sectionCont'><div className='container'><div className='per' style={width_df.per}></div></div></div>
-                <h2>Experiencia base: {pokemon?.xp_base}</h2>
-                <div className='sectionCont'><div className='container'><div className='per' style={width_xp.per}></div></div></div>
-                <h2>Altura: {pokemon?.altura}</h2>
-                <h2>Peso: {pokemon?.peso}</h2>
-                <h2>Tipos: {pokemon?.tipo[0].name}</h2>
+                <div className='par'>
+                    <div className='dupla'>
+                        <h2>HP</h2>
+                        <div className='sectionCont'><div className='container'><div className="per" style={width_hp.per}><p>{pokemon?.hp}</p></div></div></div>
+                    </div>
+                    <div className='dupla'>
+                        <h2>Attack</h2>
+                        <div className='sectionCont'><div className='container'><div className='per' style={width_pw.per}><p>{pokemon?.attack}</p></div></div></div>
+                    </div>
+                </div>
+                <div className="par">
+                    <div className="dupla">
+                        <h2>Defense</h2>
+                        <div className='sectionCont'><div className='container'><div className='per' style={width_df.per}><p>{pokemon?.defense}</p></div></div></div>
+                    </div>
+                    <div className="dupla">
+                        <h2>Base XP</h2>
+                        <div className='sectionCont'><div className='container'><div className='per' style={width_xp.per}><p>{pokemon?.xp_base}</p></div></div></div>
+                    </div>
+                </div>
+                <div className="par">
+                    <div className="dupla"><h2>Altura__{pokemon?.altura}</h2></div>
+                    
+                    <div className="dupla"><h2>Peso__{pokemon?.peso}</h2></div>
+                </div>
+                <div className="par">
+                <div className="dupla"><h2>Tipos{pokemon?.tipo[0].name}</h2></div>
+                </div>
                 <img src={pokemon?.img_pres} alt="sornero" className='pokeImg_border'/>
             </div>
         </div>

@@ -29,15 +29,12 @@ export const Pokemones = () => {
             <div className='pos-bag'>
                 <img src={Pokeball} alt="" />
             </div>
-            <div className='pokemon'>
-                <img src={Pikachu} alt="" />
-            </div>
         </div>
         <div className='app cols-op'>
           <Buscar query = {query} setQuery = {setQuery}/>
           <main> 
             <nav >
-              {filterPokemon?.slice(0,650).map((poke:IPokemon)=>(
+              {filterPokemon?.slice(0,649).map((poke:IPokemon)=>(
                   <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
                       <img src={poke.imgsrc} alt={poke.name} className='listIcon'/>
                     <div className='listItemText'>

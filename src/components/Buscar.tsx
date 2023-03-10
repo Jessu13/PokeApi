@@ -7,7 +7,7 @@ type HeaderProps = {
 
 const Buscar = ({query, setQuery}:HeaderProps) => {
   return (
-    <div className='base'>
+    <div className='base buscador'>
       <header>
         <input placeholder='Buscar Pokemon' type="text" value={query} onChange = {(event) => setQuery(event.target.value)}/>
       </header>

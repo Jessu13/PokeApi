@@ -29,10 +29,10 @@
   display: flex;
   flex-direction: row-reverse;
   border-radius: 8px;
-  background: linear-gradient(to left, rgba(90, 88, 88, 0.519), transparent 50%, transparent 50%, rgba(90, 88, 88, 0.519));
+  background: linear-gradient(to left, rgba(37, 36, 36, 0.401), transparent 50%, transparent 50%, rgba(37, 36, 36, 0.401));
   padding: 5px;
   margin-bottom: 15px;
-  color: aqua;
+  color: rgb(153, 172, 32);;
   text-decoration: none;
   justify-content: space-evenly;
 }
@@ -44,8 +44,7 @@
 }
 
 .listItem:hover{
-  box-shadow: 10px white;
-  background: linear-gradient(45deg, blue 50%, gray 50%);
+  background: linear-gradient(to left, rgb(17, 0, 0), transparent 50%, transparent 50%, rgb(17, 0, 0));
 }
 
 .listIcon{
@@ -58,7 +57,7 @@
 }
 .nobmre{
   text-decoration: none;
-  color: aqua;
+  color: rgb(5, 91, 91);
   -webkit-text-fill-color:transparent ;
   padding: 3px;
   font-size: 1rem;
@@ -67,7 +66,7 @@
   font-weight: bold;
 }
 .listItemText>:last-child{
-  color: grey;
+  color: rgb(97, 98, 68);
   font-weight: bolder;
   font-size: 1rem;
   display: flex;
@@ -76,7 +75,7 @@
 .pokeballbutton{
   border-radius: 10px 0px 0px 10px;
   border: none;
-  background: gray;
+  background: linear-gradient(rgb(94, 38, 38), transparent);
   display: flex;
   flex-direction: row-reverse;
   margin-right: 0%;
@@ -92,7 +91,7 @@
 }
 
 .pokeballbutton:hover{
-  background: green;
+  background: linear-gradient(rgb(214, 22, 22), transparent);
 }
 
 .pokeballimage{
@@ -109,7 +108,7 @@
 }
 
 .colorHome{
-  background: linear-gradient(125deg, transparent 45%, red 35%)
+  background: linear-gradient(125deg, transparent 45%, rgb(210, 8, 8) 35%)
 }
 
 .home-design img{
@@ -120,10 +119,30 @@
   padding: min(2%, 10px);
 }
 
+.buscador{
+  height: 50%;
+  width: 70%;
+  padding: 0%;
+  margin-bottom: 5%;
+}
+
+.buscador input, .buscador header{
+  height: 100%;
+  border:none;
+  width: 98%;
+  border-radius: 5px;
+  font-size: 90%;
+}
+.buscador input{
+  background-color: rgba(69, 49, 49, 0.588);
+  color: rgb(255, 255, 255);
+  padding-left: 5%;
+}
+
 .top-bar{
   padding: 5px;
   border-radius: 5px;
-  background: linear-gradient(45deg, gray 50%, black 50%);
+  background: linear-gradient(125deg, rgba(69, 49, 49, 0.588) 50%, rgba(4, 0, 0, 0.946) 50%);
   height: 10vh;
 }
 .top-bar img{
@@ -172,6 +191,10 @@
 }
 .pos-bag img{
   width: 80%;
+  border-radius: 100%;
+  -webkit-box-shadow: 10px 15px 5px 0px rgba(0, 0, 0, 0.598);
+  -moz-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.598);
+  box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.598);
 }
 
 .pokemon{
@@ -212,16 +235,16 @@
   width: 90%;
   padding: 10px;
   border-radius: 10px;
-  background: linear-gradient(red, blue);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background: linear-gradient(180deg, rgba(126, 57, 57, 0.943), rgb(42, 40, 40));
+  -webkit-box-shadow: 10px 15px 5px 0px rgba(0, 0, 0, 0.598);
+  -moz-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.598);
+  box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.598);
   width: 80%;
 }
 
 .cardInfo img{
   position: absolute;
-  right: -8%;
+  right: -6%;
   bottom: -5%;
 }
 
@@ -229,25 +252,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
 }
 
 .sectionCont{
-  height: 5%;
+  height: 30%;
   padding: 0%;
   width: 100%;
+  border-radius: 5px;
 }
 
 .container {
-  background: whitesmoke;
+  background: rgb(223, 217, 217);
   height: 100%;
-  width: 50%;
+  width: 98%;
   padding: 0%;
+  border-radius: 20px 0px;;
 }
 
-.perp{
-  background: green;
-  height: 100%;
-  width: 45%;
+.par{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0%;
+  margin-top: 5%;
+}
+
+.par h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: rgb(148, 124, 124);
+}
+
+.dupla{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0%;
+  margin: auto;
+}
+
+.dupla p{
+  font-size: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 10%;
+  color: rgb(56, 54, 51);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -293,7 +346,7 @@
     position: absolute;
     z-index: 1;
     right: -12%;
-    bottom: 0%;
+    bottom: 10%;
   }
 
   .ajuste{
@@ -302,22 +355,18 @@
   }
 
   .cardInfo{
-    height: 60vh;
+    height: 50vh;
     margin-right: 10%;
     width: 40%;
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(red, blue);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     margin-top: 5%;
   }
 
   .pokeballbutton{
     border-radius: 10px 0px 0px 10px;
     border: none;
-    background: gray;
+    background: linear-gradient(rgb(94, 38, 38), transparent);
     display: flex;
     flex-direction: row-reverse;
     margin-right: 0%;
@@ -389,8 +438,8 @@
 }
 
 .per{
-  
   height: 100%;
+  border-radius: 20px 0px;
 }
 
 .width_out{
