@@ -18,7 +18,7 @@ export async function elPokemon(name:string):Promise<PokemonDetails> {
         attack:results.stats[1].base_stat,
         defense:results.stats[2].base_stat,
         hp:results.stats[0].base_stat,
-        tipo:results.types,
+        tipo:results.types.map((element: any) => (element?.type)),
         altura:results.height,
         peso:results.weight,
         xp_base:results.base_experience,

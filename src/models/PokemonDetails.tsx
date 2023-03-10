@@ -8,7 +8,7 @@ export interface PokemonDetails{
     hp:number|0,
     attack:number,
     defense:number,
-    tipo:Tipo[],
+    tipo:Tipo[]|any,
     altura:number,
     peso:number,
     xp_base:number,

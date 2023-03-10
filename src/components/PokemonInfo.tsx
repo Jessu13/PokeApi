@@ -57,9 +57,12 @@ export const PokemonInfo = () => {
 
     console.log(`${pokemon?.name} es la verga`)
     console.log(pokemon?.tipo)
-    console.log(`El tipo obtenido en la pos 0 es: ${pokemon?.tipo[0].name}`)
+    
 
-    let type:string = 'home-design normal'
+    let type:string = `home-design ${pokemon?.tipo[Math.floor(Math.random()*(pokemon?.tipo.length))].name}`
+    console.log(type)
+    console.log(`El tipo obtenido es: ${Math.floor(Math.random()*(pokemon?.tipo.length))}`)
+
   return (
     <div className={type}>
         <Top></Top>
@@ -99,8 +102,9 @@ export const PokemonInfo = () => {
                     
                     <div className="dupla"><h2>Peso__{pokemon?.peso}</h2></div>
                 </div>
-                <div className="par">
-                <div className="dupla"><h2>Tipos{pokemon?.tipo[0].name}</h2></div>
+            
+                <div className="par parteJerson">
+                    { pokemon?.tipo.map((element:any) => <h2>{element.name} </h2>) }
                 </div>
                 <img src={pokemon?.img_pres} alt="sornero" className='pokeImg_border'/>
             </div>

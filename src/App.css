@@ -278,6 +278,12 @@
   margin-top: 5%;
 }
 
+.parteJerson{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
 .par h2{
   display: flex;
   align-items: center;
