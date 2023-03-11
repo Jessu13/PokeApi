@@ -280,8 +280,15 @@
 
 .parteJerson{
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
-  font-size: 25px;
+  font-size: 15px;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-style: italic;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 4%;
+  
 }
 
 .par h2{

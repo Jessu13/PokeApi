@@ -103,7 +103,7 @@ export const PokemonInfo = () => {
                     <div className="dupla"><h2>Peso__{pokemon?.peso}</h2></div>
                 </div>
             
-                <div className="par parteJerson">
+                <div className="parteJerson">
                     { pokemon?.tipo.map((element:any) => <h2>{element.name} </h2>) }
                 </div>
                 <img src={pokemon?.img_pres} alt="sornero" className='pokeImg_border'/>
